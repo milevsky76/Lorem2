@@ -1,0 +1,36 @@
+.tag {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tag__item {
+  width: 133px;
+  padding: 5px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.3;
+  color: rgba(var(--black-rgb), 0.2);
+  border: 1px solid rgba(var(--black-rgb), 0.2);
+}
+
+@media (max-width: 640px) {
+  .tag__item {
+    width: 148px;
+  }
+}
+
+@media (max-width: 483px) {
+  .tag {
+    flex-direction: row;
+    column-gap: 15px;
+  }
+
+  .tag__item {
+    flex: 1 1 auto;
+    min-width: 90px;
+  }
+}

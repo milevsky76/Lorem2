@@ -1,0 +1,97 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: $mobile-width;
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 400;
+  color: var(--black);
+
+  background-color: var(--smoky-white);
+}
+
+body.lock {
+  overflow: hidden;
+  visibility: hidden;
+  pointer-events: none;
+  transition: visibility 0.3s ease 0s;
+}
+
+body.lock .menu__icon,
+body.lock .menu__body {
+  visibility: visible;
+  pointer-events: auto;
+}
+
+main {
+  flex: 1 1 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+[class*="__container"] {
+  max-width: 1220px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.vh {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.non {
+  display: none !important;
+}
+
+.button {
+  display: inline-block;
+  padding: 9px 14px;
+
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 500;
+  text-align: center;
+  color: var(--accent);
+  text-decoration: none;
+
+  background-color: var(--smoky-white);
+  border: 1px solid var(--accent);
+
+  &:hover,
+  &:focus {
+    color: var(--smoky-white);
+    background-color: var(--accent);
+  }
+}
