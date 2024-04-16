@@ -15,12 +15,9 @@
 }
 
 .footer__logo {
+  display: flex;
   flex: 0 0 auto;
   width: 223px;
-
-  img {
-    background-color: #88ABC8;
-  }
 }
 
 .footer__list {
@@ -73,10 +70,6 @@
     column-gap: 20px;
   }
 
-  .footer__logo {
-    margin-right: 0;
-  }
-
   .footer__list {
     flex: 1 1 auto;
     max-width: 305px;
@@ -96,7 +89,7 @@
   }
 
   .footer__logo {
-    margin-right: 0;
+    justify-content: center;
   }
 
   .footer__list {
